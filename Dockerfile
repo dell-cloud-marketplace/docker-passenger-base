@@ -9,7 +9,6 @@ RUN apt-get update && apt-get install -yq \
     wget \
     libssl-dev
 
-
 # Start Nginx / Passenger
 RUN rm -f /etc/service/nginx/down
 
@@ -28,8 +27,8 @@ RUN mkdir /opt/nginx/ssl_certs && \
        -keyout /opt/nginx/ssl_certs/nginx.key -out /opt/nginx/ssl_certs/nginx.crt \
        -subj '/O=Dell/OU=MarketPlace/CN=www.dell.com'
 
-# Creaet directory for Nginx Logs
+# Create directory for Nginx Logs
 RUN mkdir -p /var/log/nginx/
 
-# Expose Spree port
+# Expose port
 EXPOSE 80 443
