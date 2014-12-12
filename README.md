@@ -16,20 +16,9 @@ Nginx             | 1.6.2              | HTTP server & Reverse proxy
 Ruby         	    | see [docker-rails](https://github.com/dell-cloud-marketplace/docker-rails/) | Programming language
 Ruby on Rails     | see [docker-rails](https://github.com/dell-cloud-marketplace/docker-rails/)     | Web application framework
 
-## Usage
-
-### Basic Example
-To start your container with:
-
-* A named container ("passenger")
-
-Do:
-
-  sudo docker run -d dell/passengner-base
-
 ## Administration
 
-This is a base image, although Passenger and Nginx have been added they are left to the inherited image to start the Nginx service ‘```/opt/nginx/sbin/nginx```’. Passenger environment has been set to development (**rails_env development;**). This has been defined in the **nginx.conf** file which resides at ```/opt/nginx/conf``` and can easily be modified to Production.
+This is a base image, although Passenger and Nginx have been added they are left to the inherited image to start the Nginx service ‘```/opt/nginx/sbin/nginx```’. Passenger environment has been set to development (**rails_env development;**). This has been defined in the **nginx.conf** file which resides at ```/opt/nginx/conf``` within the container and can easily be modified to production environment.
 
 
 ## Reference
