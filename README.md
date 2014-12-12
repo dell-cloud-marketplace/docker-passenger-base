@@ -1,9 +1,8 @@
-#docker-passengner-base
-A basic Passenger image for dependant images such as [dell/spree](https://github.com/dell-cloud-marketplace/docker-spree).
+# docker-passenger-base
 
-This is a base Docker image for [Phusion Passengner](https://www.phusionpassenger.com/) - an open-source web application server. This base image is set up to be used with Nginx and Ruby on Rails.
+This image installs [Phusion Passenger](https://www.phusionpassenger.com/) - an open-source web application server. This base image is set up to be used with Nginx and Ruby on Rails.
 
-
+This is a basic Passenger image for dependant images such as [dell/spree](https://github.com/dell-cloud-marketplace/docker-spree).
 
 ## Components
 The software stack comprises the following components:
