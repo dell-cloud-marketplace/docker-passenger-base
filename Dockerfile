@@ -9,7 +9,6 @@ RUN apt-get update && apt-get install -yq \
     wget \
     libssl-dev
 
-
 # Start Nginx / Passenger
 RUN rm -f /etc/service/nginx/down
 
