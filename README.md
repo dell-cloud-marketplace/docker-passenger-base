@@ -2,7 +2,7 @@
 
 This image installs [Phusion Passenger](https://www.phusionpassenger.com/) - an open-source web application server. This base image is set up to be used with Nginx and Ruby on Rails.
 
-This is a basic Passenger image for dependant images such as [dell/spree](https://github.com/dell-cloud-marketplace/docker-spree).
+This is a basic Passenger image for building Ruby on Rails applications such as [dell/spree](https://github.com/dell-cloud-marketplace/docker-spree).
 
 ## Components
 The software stack comprises the following components:
