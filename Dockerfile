@@ -1,13 +1,11 @@
-FROM dell/rails
+FROM dell/rails-base:1.0
 MAINTAINER Dell Cloud Market Place <Cloud_Marketplace@dell.com>
 
 # Set environment variable for package install
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install packages
-RUN apt-get update && apt-get install -yq \
-    wget \
-    libssl-dev
+RUN apt-get update && apt-get install -yq wget
 
 # Install Passenger
 RUN gem install passenger -v=4.0.53
