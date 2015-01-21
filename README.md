@@ -1,8 +1,5 @@
 # docker-passenger-base
-
-This image installs [Phusion Passenger](https://www.phusionpassenger.com/) - an open-source web application server. This base image is set up to be used with Nginx and Ruby on Rails.
-
-This is a basic Passenger image for building Ruby on Rails applications such as [dell/spree](https://github.com/dell-cloud-marketplace/docker-spree).
+This image installs [Phusion Passenger](https://www.phusionpassenger.com/) - an open-source web application server. It is a basic  image for building Ruby on Rails applications such as [dell/spree](https://github.com/dell-cloud-marketplace/docker-spree).
 
 ## Components
 The software stack comprises the following components:
@@ -16,9 +13,9 @@ Ruby         	    | see [docker-rails](https://github.com/dell-cloud-marketplace
 Ruby on Rails     | see [docker-rails](https://github.com/dell-cloud-marketplace/docker-rails/)     | Web application framework
 
 ## Administration
+Although Passenger and Nginx have been added, it is up to derived images to start the Nginx service (```/opt/nginx/sbin/nginx```).
 
-This is a base image, although Passenger and Nginx have been added they are left to the inherited image to start the Nginx service ‘```/opt/nginx/sbin/nginx```’. Passenger environment has been set to development (**rails_env development;**). This has been defined in the **nginx.conf** file which resides at ```/opt/nginx/conf``` within the container and can easily be modified to production environment.
-
+The Passenger environment is set to development mode. This is defined in the **nginx.conf** file which resides at ```/opt/nginx/conf``` within the container and can easily be modified for a production environment.
 
 ## Reference
 
