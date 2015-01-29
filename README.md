@@ -9,8 +9,8 @@ Name              | Version    | Description
 Ubuntu            | Trusty             | Operating system
 Phusion Passenger | 4.0.53             | Web server
 Nginx             | 1.6.2              | HTTP server & Reverse proxy
-Ruby         	    | see [docker-rails](https://github.com/dell-cloud-marketplace/docker-rails/) | Programming language
-Ruby on Rails     | see [docker-rails](https://github.com/dell-cloud-marketplace/docker-rails/)     | Web application framework
+Ruby         	    | see [docker-rails-base](https://github.com/dell-cloud-marketplace/docker-rails-base) | Programming language
+Ruby on Rails     | see [docker-rails-base](https://github.com/dell-cloud-marketplace/docker-rails-base) | Web application framework
 
 ## Administration
 Although Passenger and Nginx have been added, it is up to derived images to start the Nginx service (```/opt/nginx/sbin/nginx```).
