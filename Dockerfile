@@ -20,6 +20,7 @@ RUN passenger-install-nginx-module --auto-download --auto --prefix=/opt/nginx
 
 # Copy configuration file
 COPY nginx.conf /opt/nginx/conf/nginx.conf
+COPY supervisord-nginx.conf /etc/supervisor/conf.d/supervisord-nginx.conf
 
 # Generate self-signed certificate to enable HTTPS
 RUN mkdir /opt/nginx/ssl_certs && \
