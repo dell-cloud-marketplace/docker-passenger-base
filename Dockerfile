@@ -1,20 +1,25 @@
-FROM dell/rails-base:1.0
+FROM dell/rails-base:1.1
 MAINTAINER Dell Cloud Market Place <Cloud_Marketplace@dell.com>
 
 # Set environment variable for package install
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install packages
-RUN apt-get update && apt-get install -yq wget
+RUN apt-get update && apt-get install -yq \
+	supervisor \
+	wget
+
+# Clean package cache
+RUN apt-get -y clean && rm -rf /var/lib/apt/lists/*
 
 # Install Passenger
-RUN gem install passenger -v=4.0.53
+RUN gem install passenger -v=5.0.6
 
 # Install Passenger module nginx
 RUN passenger-install-nginx-module --auto-download --auto --prefix=/opt/nginx
 
 # Copy configuration file
-ADD nginx.conf /opt/nginx/conf/nginx.conf
+COPY nginx.conf /opt/nginx/conf/nginx.conf
 
 # Generate self-signed certificate to enable HTTPS
 RUN mkdir /opt/nginx/ssl_certs && \
@@ -22,8 +27,5 @@ RUN mkdir /opt/nginx/ssl_certs && \
     -keyout /opt/nginx/ssl_certs/nginx.key -out /opt/nginx/ssl_certs/nginx.crt \
     -subj '/O=Dell/OU=MarketPlace/CN=www.dell.com'
 
-# Create directory for Nginx Logs
+# Create directory for Nginx logs
 RUN mkdir -p /var/log/nginx/
-
-# Expose port
-EXPOSE 80 443
