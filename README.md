@@ -7,7 +7,7 @@ The software stack comprises the following components:
 Name              | Version    | Description
 ------------------|------------|------------------------------
 Ubuntu            | Trusty             | Operating system
-Phusion Passenger | 5.06               | Web server
+Phusion Passenger | 5.0.6               | Web server
 Nginx             | 1.6.2              | HTTP server & Reverse proxy
 Ruby         	    | see [docker-rails-base](https://github.com/dell-cloud-marketplace/docker-rails-base) | Programming language
 Ruby on Rails     | see [docker-rails-base](https://github.com/dell-cloud-marketplace/docker-rails-base) | Web application framework
